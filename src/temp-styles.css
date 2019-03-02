@@ -1,0 +1,20 @@
+.chatHeader-nav-selected {
+    background-color: orange;
+}
+
+
+.chatScreen {
+    display: flex;
+}
+
+.ChatList {
+    min-width: 10rem;
+}
+
+.chatRoom {
+    display: none;
+}
+
+.chatRoom.chatRoom-visible {
+    display: block;
+}

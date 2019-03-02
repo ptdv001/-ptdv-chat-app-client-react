@@ -1,4 +1,39 @@
-# -ptdv-chat-app-client-react
+# Chat App React
+
+## Rough Notes While Learning
+
+When get to styling SEE example CSS lib used in TODOMVC at:
+https://github.com/tastejs/todomvc-app-css
+
+```
+Create new app:
+npx create-react-app {APP_NAME}
+
+Help in chat:
+https://discord.gg/0ZcbPKXt5bZjGY5n
+
+
+This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, if you refer to a method without () after it, such as onClick={this.handleClick}, you should bind that method.
+//or just use ES6 '() => {}'
+
+The problem with this syntax is that a different callback is created each time the LoggingButton renders. In most cases, this is fine. However, if this callback is passed as a prop to lower components, those components might do an extra re-rendering. We generally recommend binding in the constructor or using the class fields syntax, to avoid this sort of performance problem.
+
+Instead of trying to sync the state between different components, you should rely on the top-down data flow. Lifting state involves writing more “boilerplate” code than two-way binding approaches, but as a benefit, it takes less work to find and isolate bugs. React’s one-way data flow (also called one-way binding) keeps everything modular and fast.
+
+controlled component: element values e.g. form, controlled by  React
+
+"pure functions" same inputs result in same output
+
+	~ Separation of Concerns, Reusability
+	- Container - Presentation, Screens - Components..
+	- Container - data fetching, datat mutation (tend stateful), never styles only a wrapping element (business logic - how works)
+	- Presentation - reads data and callback props (tend stateless), renders (view - how looks)
+
+Parent control Child: use a ref
+Child control Parent: use passed up function
+> pattern gets cumberson with deep relationship tree, use Redux instead
+> and also for any state that is app-wide
+```
 
 
 ---
